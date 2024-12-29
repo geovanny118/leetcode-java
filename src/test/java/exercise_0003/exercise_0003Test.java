@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class exercise_0003Test {
 
-    static String s1, s2, s3, s4;
+    static String s1, s2, s3, s4, s5;
 
     @BeforeAll
     static void setupInstance(){
@@ -16,6 +16,7 @@ class exercise_0003Test {
         s2 = "bbbbb";
         s3 = "pwwkew";
         s4 = "aab";
+        s5 = "dvdf";
     }
 
     @Test
@@ -36,5 +37,10 @@ class exercise_0003Test {
     @Test
     void testCase4() {
         assertEquals(2, lengthOfLongestSubstring(s4));
+    }
+
+    @Test
+    void testCase5() {
+        assertEquals(3, lengthOfLongestSubstring(s5));
     }
 }
