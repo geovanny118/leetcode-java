@@ -1,10 +1,9 @@
 package exercise_0001;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static exercise_0001.exercise_0001.TwoSum;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*; //import methods as is....all methods will be available within the class
 
 class exercise_0001Test {
 
