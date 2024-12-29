@@ -4,33 +4,32 @@ public class exercise_0003 {
     public static void main( String[] args )
     {
         System.out.println( "LeetCode Exercise 0003" );
-        String s = "aab";
+        String s = "pwwkew";
         int result = lengthOfLongestSubstring(s);
         //print result
         System.out.println(result);
     }
 
     static int lengthOfLongestSubstring(String s) {
-        char[] arreglo = s.toCharArray();
-        StringBuilder salida = new StringBuilder();
-        int contador = 0;
+        char[] characterArray = s.toCharArray();
+        StringBuilder output = new StringBuilder();
+        int maxCounter = 0;
+        int index;
 
-        for (char c : arreglo) {
+        for (char c : characterArray) {
             CharSequence charSequence = String.valueOf(c);
 
-            if (!salida.toString().contains(charSequence)) {
-                salida.append(c);
-            } else {
-                if (salida.length() > contador) {
-                    contador = salida.length();
-                }
-
-                salida = new StringBuilder(String.valueOf(c));
+            if (output.toString().contains(charSequence)) {
+                index = output.toString().indexOf(c);
+                output.delete(0, index + 1);
             }
+
+            output.append(c);
+            maxCounter = Math.max(maxCounter, output.length());
         }
 
-        if(contador == 0) {
-            contador = salida.length();
+        if(maxCounter == 0) {
+            maxCounter = output.length();
         }
 
         if(s.isEmpty()){
@@ -39,6 +38,6 @@ public class exercise_0003 {
             return 1;
         }
 
-        return contador;
+        return maxCounter;
     }
 }
