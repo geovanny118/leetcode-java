@@ -12,10 +12,16 @@ class exercise_0009Test {
     @Nested
     class IsPalindrome {
         int number_1 = 121;
+        int number_2 = 11;
 
         @Test
         void testCase1() {
             assertTrue(IsPalindrome(number_1));
+        }
+
+        @Test
+        void testCase2() {
+            assertTrue(IsPalindrome(number_2));
         }
     }
 
