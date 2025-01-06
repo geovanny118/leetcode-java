@@ -15,7 +15,7 @@ public class exercise_0058 {
             return 1;
         }
 
-        while(word.charAt(index) != ' ' && index>-1){
+        while(word.charAt(index) != ' '){
             result++;
             index--;
         }
