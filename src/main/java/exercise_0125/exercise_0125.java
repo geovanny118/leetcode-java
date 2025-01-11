@@ -4,18 +4,18 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class exercise_0125 {
-    public boolean isPalindrome(String s) {
+    public static boolean isPalindrome(String s) {
         s = prepareString(s);
         return s.equals(reverseString(s));
     }
 
-    public String prepareString(String s) {
+    public static String prepareString(String s) {
         s = removePunctuationAndSpaces(s);
         s = changeToLowerCase(s);
         return s;
     }
 
-    public String removePunctuationAndSpaces(String s) {
+    public static String removePunctuationAndSpaces(String s) {
         String pattern = "[.,:;!?@#_'|\\\\/\\- {}\"\\[\\]()`]";
         String substitution = "";
         return s.replaceAll(pattern, substitution);
@@ -34,7 +34,7 @@ public class exercise_0125 {
         return result.toString();
     }
 
-    public String reverseString(String s) {
+    public static String reverseString(String s) {
         return new StringBuilder(s).reverse().toString();
     }
 }
